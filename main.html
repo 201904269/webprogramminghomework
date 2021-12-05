@@ -59,7 +59,7 @@
 	    </form>
     </div>
     <div id="fixed">
-      <script id="span">
+      <script>
 	    var count = GetCookie("count");
 	    var expire = new Date (); 
 	    count++;
@@ -69,7 +69,7 @@
       </script>
     </div>
     <script>
-	    var span = document.getElementById("span");
+	    var span = document.getElementById("fixed");
 	    var timerID = setInterval("doRotate()", 200); // 200밀리초 주기로 doRotate() 호출
 	    function doRotate() {
 		    var str = span.innerHTML;
