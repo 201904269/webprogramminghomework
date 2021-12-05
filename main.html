@@ -58,7 +58,7 @@
 		<button type="button" onClick="location.href='image,video/restructure.png'"><img src="image,video/MainButton3.png"></button>
 	    </form>
     </div>
-    <div id="fixed">
+    <div id="fixed"><span id="span">
       <script>
 	    var count = GetCookie("count");
 	    var expire = new Date (); 
@@ -67,6 +67,17 @@
 	    SetCookie("count",count,expire);
 	    document.write("<p>Total : " + count);
       </script>
-    </div>
+    </span></div>
+    <script>
+	    var span = document.getElementById("span");
+	    var timerID = setInterval("doRotate()", 200); // 200밀리초 주기로 doRotate() 호출
+	    function doRotate() {
+		    var str = span.innerHTML;
+		    var firstChar = str.substr(0, 1);
+		    var remains = str.substr(1, str.length-1);
+		    str = remains + firstChar;
+		    span.innerHTML = str; // str 텍스트를 span 객체에 출력
+	    }
+    </script>
   </body>
 </html>
