@@ -66,9 +66,6 @@
 	    expire.setTime(expire.getTime() + (365 * 24 * 3600 * 1000));
 	    SetCookie("count",count,expire);
 	    document.write("<p>Total : " + count);
-      </script>
-    </div>
-    <script>
 	    var span = document.getElementById("fixed");
 	    var timerID = setInterval("doRotate()", 200); // 200밀리초 주기로 doRotate() 호출
 	    function doRotate() {
@@ -78,6 +75,7 @@
 		    str = remains + firstChar;
 		    span.innerHTML = str; // str 텍스트를 span 객체에 출력
 	    }
-    </script>
+      </script>
+    </div>
   </body>
 </html>
