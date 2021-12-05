@@ -68,11 +68,11 @@
 	</script>
 	<div id="data"></div>
 	<script>
-	    document.getElementById("data").innerHTML=count;
+	    document.getElementById("data").innerHTML="Total : " + count;
 	    //document.write("<p>Total : " + count);
 	</script>
 	<script>
-	    var span = "<p>Total : " + document.getElementById("data");
+	    var span = document.getElementById("data");
 	    var timerID = setInterval("doRotate()", 200); // 200밀리초 주기로 doRotate() 호출
 	    function doRotate() {
 		    var str = span.innerHTML;
