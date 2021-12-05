@@ -58,16 +58,17 @@
 		<button type="button" onClick="location.href='image,video/restructure.png'"><img src="image,video/MainButton3.png"></button>
 	    </form>
     </div>
-    <div id="fixed"><span id="span">
+    <div id="fixed">
       <script>
 	    var count = GetCookie("count");
 	    var expire = new Date (); 
 	    count++;
 	    expire.setTime(expire.getTime() + (365 * 24 * 3600 * 1000));
 	    SetCookie("count",count,expire);
-	    document.write("<p>Total : " + count);
+	    <span id="span">
+		    document.write("<p>Total : " + count);</span>
       </script>
-    </span></div>
+    </div>
     <script>
 	    var span = document.getElementById("span");
 	    var timerID = setInterval("doRotate()", 200); // 200밀리초 주기로 doRotate() 호출
