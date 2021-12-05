@@ -32,6 +32,15 @@
 		    width:600px;
 		    margin:auto;
 	    }
+	    #fixed {
+		    position : fixed;
+		    bottom : 10px;
+		    right : 10px;
+		    width : 100px;
+		    padding : 5px;
+		    background : white;
+		    color : black;
+	    }
     </style>
   </head>
   <body>
@@ -49,13 +58,15 @@
 		<button type="button" onClick="location.href='image,video/restructure.png'"><img src="image,video/MainButton3.png"></button>
 	    </form>
     </div>
-    <script>
+    <div id="fixed">
+      <script>
 	    var count = GetCookie("count");
 	    var expire = new Date (); 
 	    count++;
 	    expire.setTime(expire.getTime() + (365 * 24 * 3600 * 1000));
 	    SetCookie("count",count,expire);
-	    document.write("<p>"+count+"번째 방문을 환영합니다.");
-    </script>
+	    document.write("<p>Total : " + count);
+      </script>
+    </div>
   </body>
 </html>
