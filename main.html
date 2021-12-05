@@ -59,14 +59,13 @@
 	    </form>
     </div>
     <div id="fixed">
-      <script>
+      <script id="span">
 	    var count = GetCookie("count");
 	    var expire = new Date (); 
 	    count++;
 	    expire.setTime(expire.getTime() + (365 * 24 * 3600 * 1000));
 	    SetCookie("count",count,expire);
-	    <span id="span">
-		    document.write("<p>Total : " + count);</span>
+	    document.write("<p>Total : " + count);
       </script>
     </div>
     <script>
